@@ -1,0 +1,128 @@
+Script started on Fri 11 Sep 2020 12:49:54 AM EDT
+[1m[7m%[27m[1m[0m                                                                                                               ]2;craigie@craigie-razor-blade: ~/git/operating_systems/assignment_1]1;../assignment_1[0m[27m[24m[J[39m[0m[49m[40m[39m craigie@craigie-razor-blade [44m[30m[30m ~/git/operating_systems/assignment_1 [43m[34m[30m  assign0 [49m[33m[39m [K[?1h=[?2004h../doit[1m [0m[0m [?1l>[?2004l
+]2;./doit]1;./doit==>ls
+
+
+Number of arguments: 1
+1.  ls
+
+Execution output: 
+assignment_1.cpp  doit	Examples  foo.txt  typescript
+
+Resource statistics: 
+1.  User CPU Time Used:            0 ms
+2.  System CPU Time Used:          0 ms
+3.  Wall Clock Execution Time:     0 ms
+3.  Voluntary Context Switches:    1
+4.  Involuntary Context Switches:  0
+5.  Number of Major Page Faults:   0
+6.  Number of Minor Page Faults:   115
+
+
+==>cd ../
+
+Transferring directory to: ../
+
+==>ls
+
+
+Number of arguments: 1
+1.  ls
+
+Execution output: 
+assignment_0  assignment_1
+
+Resource statistics: 
+1.  User CPU Time Used:            1 ms
+2.  System CPU Time Used:          0 ms
+3.  Wall Clock Execution Time:     0 ms
+3.  Voluntary Context Switches:    2
+4.  Involuntary Context Switches:  0
+5.  Number of Major Page Faults:   0
+6.  Number of Minor Page Faults:   234
+
+
+==>cat /etc/modules
+
+
+Number of arguments: 2
+1.  cat
+2.  /etc/modules
+
+Execution output: 
+# /etc/modules: kernel modules to load at boot time.
+#
+# This file contains the names of kernel modules that should be loaded
+# at boot time, one per line. Lines beginning with "#" are ignored.
+
+
+Resource statistics: 
+1.  User CPU Time Used:            1 ms
+2.  System CPU Time Used:          1 ms
+3.  Wall Clock Execution Time:     2 ms
+3.  Voluntary Context Switches:    3
+4.  Involuntary Context Switches:  0
+5.  Number of Major Page Faults:   0
+6.  Number of Minor Page Faults:   319
+
+
+==>set prompt = +++)>^[[D      ++]>
+
++++++]>sleep 7 &
+
+Initializing Background Task......
+
+[23647] PROCESS STARTING
+
+Number of arguments: 2
+1.  sleep
+2.  7
+
+Execution output: 
++++++]>jobs
+
+Process Number: [23647]   Process Name: [sleep]
++++++]>
+Resource statistics: 
+1.  User CPU Time Used:            1 ms
+2.  System CPU Time Used:          0 ms
+3.  Wall Clock Execution Time:     7002 ms
+3.  Voluntary Context Switches:    2
+4.  Involuntary Context Switches:  0
+5.  Number of Major Page Faults:   0
+6.  Number of Minor Page Faults:   85
+
+
+[23647] PROCESS COMPLETE!
+
++++++]>sleep 8 &
+
+Initializing Background Task......
+
+[23663] PROCESS STARTING
+
+Number of arguments: 2
+1.  sleep
+2.  8
+
+Execution output: 
++++++]>exit
+
+
+Resource statistics: 
+1.  User CPU Time Used:            0 ms
+2.  System CPU Time Used:          0 ms
+3.  Wall Clock Execution Time:     8001 ms
+3.  Voluntary Context Switches:    2
+4.  Involuntary Context Switches:  1
+5.  Number of Major Page Faults:   0
+6.  Number of Minor Page Faults:   85
+
+
+[23663] PROCESS COMPLETE!
+
++++++]>Command Terminating......
+[1m[7m%[27m[1m[0m                                                                                                               ]2;craigie@craigie-razor-blade: ~/git/operating_systems/assignment_1]1;../assignment_1[0m[27m[24m[J[39m[0m[49m[40m[39m craigie@craigie-razor-blade [44m[30m[30m ~/git/operating_systems/assignment_1 [43m[34m[30m  assign0 [49m[33m[39m [K[?1h=[?2004h[?1l>[?2004l
+[1m[7m%[27m[1m[0m                                                                                                               ]2;craigie@craigie-razor-blade: ~/git/operating_systems/assignment_1]1;../assignment_1[0m[27m[24m[J[39m[0m[49m[40m[39m craigie@craigie-razor-blade [44m[30m[30m ~/git/operating_systems/assignment_1 [43m[34m[30m  assign0 [49m[33m[39m [K[?1h=[?2004heexit[?1l>[?2004l
+]2;exit]1;exit
+Script done on Fri 11 Sep 2020 12:57:17 AM EDT
