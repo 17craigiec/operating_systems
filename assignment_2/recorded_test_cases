@@ -1,0 +1,143 @@
+Script started on 2020-09-21 23:48:37-04:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="203" LINES="55"]
+
+./traceanal < ls.slog
+AAA: 105 invoked system call instances from 23 unique system calls
+access 2
+arch_prctl 2
+brk 3
+close 11
+execve 1
+exit_group 1
+fstat 10
+getdents64 2
+ioctl 2
+mmap 27
+mprotect 9
+munmap 1
+openat 9
+pread64 8
+prlimit64 1
+read 7
+rt_sigaction 2
+rt_sigprocmask 1
+set_robust_list 1
+set_tid_address 1
+stat 1
+statfs 2
+write 1
+
+./traceanal seq < ls.slog
+AAA: 105 invoked system call instances from 23 unique system calls
+access 2
+  access:openat 2
+arch_prctl 2
+  arch_prctl:access 1
+  arch_prctl:mprotect 1
+brk 3
+  brk:arch_prctl 1
+  brk:brk 1
+  brk:openat 1
+close 11
+  close:access 1
+  close:close 1
+  close:exit_group 1
+  close:fstat 1
+  close:ioctl 1
+  close:mmap 1
+  close:openat 5
+execve 1
+  execve:brk 1
+exit_group 1
+fstat 10
+  fstat:getdents64 1
+  fstat:mmap 5
+  fstat:pread64 2
+  fstat:read 1
+  fstat:write 1
+getdents64 2
+  getdents64:close 1
+  getdents64:getdents64 1
+ioctl 2
+  ioctl:ioctl 1
+  ioctl:stat 1
+mmap 27
+  mmap:arch_prctl 1
+  mmap:close 7
+  mmap:mmap 17
+  mmap:mprotect 2
+mprotect 9
+  mprotect:mmap 2
+  mprotect:mprotect 6
+  mprotect:munmap 1
+munmap 1
+  munmap:set_tid_address 1
+openat 9
+  openat:fstat 4
+  openat:read 5
+pread64 8
+  pread64:fstat 2
+  pread64:mmap 2
+  pread64:pread64 4
+prlimit64 1
+  prlimit64:statfs 1
+read 7
+  read:close 1
+  read:fstat 3
+  read:pread64 2
+  read:read 1
+rt_sigaction 2
+  rt_sigaction:rt_sigaction 1
+  rt_sigaction:rt_sigprocmask 1
+rt_sigprocmask 1
+  rt_sigprocmask:prlimit64 1
+set_robust_list 1
+  set_robust_list:rt_sigaction 1
+set_tid_address 1
+  set_tid_address:set_robust_list 1
+stat 1
+  stat:openat 1
+statfs 2
+  statfs:brk 1
+  statfs:statfs 1
+write 1
+  write:close 1                                                                                                                                                                                                         
+ 
+./traceanal seq < empty.slog
+AAA: 31 invoked system call instances from 13 unique system calls
+access 1
+  access:openat 1
+arch_prctl 2
+  arch_prctl:access 1
+  arch_prctl:mprotect 1
+brk 1
+  brk:arch_prctl 1
+close 2
+  close:arch_prctl 1
+  close:openat 1
+execve 1
+  execve:brk 1
+exit_group 1
+fstat 2
+  fstat:mmap 2
+mmap 7
+  mmap:close 2
+  mmap:mmap 3
+  mmap:mprotect 1
+  mmap:pread64 1
+mprotect 4
+  mprotect:mmap 1
+  mprotect:mprotect 2
+  mprotect:munmap 1
+munmap 1
+  munmap:exit_group 1
+openat 2
+  openat:fstat 1
+  openat:read 1
+pread64 6
+  pread64:fstat 1
+  pread64:mmap 1
+  pread64:pread64 4
+read 1
+  read:pread64 1
+
+Script done on 2020-09-21 23:49:24-04:00 [COMMAND_EXIT_CODE="0"]
